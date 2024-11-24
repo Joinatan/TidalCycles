@@ -1,0 +1,52 @@
+d1 
+  $ jux rev
+  $ arp "up"
+  $ n "c'maj f'min"
+  # s "supermandolin"
+  # dry "0.1" # room "0.9"
+  # octave "4"
+  
+d1 $ jux rev $ n (off 0.125 (|+ 12) $ off 0.125 (|+ 7)  "<c*2 a(3,8) f(3,8,2) e*2>")
+  # sound "supermandolin"
+  # legato 2
+  # dry "0.1" # room "0.6"
+
+d1 
+  $ s "bd bd:2 ~"
+  # amp "0.1 0.05 0.02"
+  # dry 0.4 # room 0.6
+
+   
+d2  
+  $ jux rev
+  $ n (scale "dorian" "<[7..11] [6..10]>")
+  # sound "ewharp"
+  # dry "0.1" # room "0.7"
+  # amp "0.5 0.2 0.8"
+  # octave 6
+
+d3  
+  $ n (scale "dorian" "7(3,7)")
+  # sound "ewharp"
+  # dry "0.1" # room "0.7"
+  # amp "0.5 0.2 0.8"
+  # octave 4
+
+d3 $
+  <~ 0.1
+  $ s "hh cp"
+  # amp 0.1
+  # dry "0.1" # room "0.6"
+
+d4 $ s "hh*4 ~ hh*5 ~"
+
+:t jux
+
+:t off
+
+hush
+
+:t query
+
+:t (#)
+

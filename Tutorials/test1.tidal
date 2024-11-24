@@ -1,0 +1,27 @@
+setcps 0.7
+
+d1 $  n (scale "ritusen" "0 .. 7") # sound "supermandolin" # dry 0.4 # room 0.6 # size 0.8 
+
+d2 $ sound "bd ho sn:1 ho" # dry 0.4 # room 0.4 # size 0.5 
+
+d3 $ jux rev $ n (off 0.125 (|+ 12) $ off 0.125 (|+ 7)  "<c*2 a(3,8) f(3,8,2) e*2>")
+  # sound "supermandolin"
+  # legato 2
+
+d3 $ chunk 4 (|- note 5) $ jux rev $ 
+  arp "<pinkyup down thumbup up>" $ n "<c'maj'4 e4'min'8 f4'maj'4>"
+  # sound "supermandolin"
+  # sustain 2 # room 0.3 # sz 0.9
+
+d4 $ sound "hh:3*4 ~ cp ~"  
+
+d3 
+  $ superimpose ((# speed "2*12") . (# squiz (slow 2 $ range 1 16 $ sine)) . (striate
+  "[4|2|3]") . (ply "[[1 1 2 4]|[1 1 2 2]]") . (# room "0 0.5") . (# sz "0.2 0.4"))
+  $ fast 2
+  $ s "bd hh bd hh" # amp 0.4
+
+
+d5 $ fast 1 $ s "{bd*4, cp*3}"
+
+hush
