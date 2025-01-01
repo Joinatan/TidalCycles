@@ -11,30 +11,59 @@ d1 $ jux rev $ n (off 0.125 (|+ 12) $ off 0.125 (|+ 7)  "<c*2 a(3,8) f(3,8,2) e*
   # legato 2
   # dry "0.1" # room "0.6"
 
+
+ setcps(0.7)
+
+ hush
+
+ 
+
+----------------------------------------------------------BRA
 d1 
   $ s "bd bd:2 ~"
   # amp "0.1 0.05 0.02"
   # dry 0.4 # room 0.6
-
    
 d2  
   $ jux rev
   $ n (scale "dorian" "<[7..11] [6..10]>")
   # sound "ewharp"
-  # dry "0.1" # room "0.7"
+  # dry "0.1" # room "0.9" # size "0.9"
   # amp "0.5 0.2 0.8"
   # octave 6
 
 d3  
-  $ n (scale "dorian" "7(3,7)")
+  $ n (scale "dorian" "<7>(3,7)")
   # sound "ewharp"
-  # dry "0.1" # room "0.7"
+  # delay "0.5" # delayt "0.3" # delayfb "0.6" # lock "1"
+  # dry "0.1" # room "0.7" # size "0.8"
+  # amp "0.5 0.2 0.8"
+  # octave 4
+
+d4
+  $ n (scale "dorian" "7")
+  # delay "0.5" # delaytime "0.9" # delayfb "0.8" # lock "1"
+  # sound "supermandolin"
+  # dry "0.1" # room "0.9" # size "0.8"
+  # octave 5
+  # amp 0.07
+
+----------------------------------------------------------BRA
+
+d1 $ n "1 2" # s "REAMIDI" 
+
+d6  
+  $ jux rev
+  $ n (scale "dorian" "<[7..11] [6..10]>")
+  # s "REAMIDI"
+  # dry "0.1" # room "0.9" # size "0.9"
   # amp "0.5 0.2 0.8"
   # octave 4
 
 d3 $
   <~ 0.1
-  $ s "hh cp"
+  $ s 
+"hh cp"
   # amp 0.1
   # dry "0.1" # room "0.6"
 

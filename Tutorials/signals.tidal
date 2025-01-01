@@ -1,0 +1,19 @@
+d1
+  $ jux rev
+  $ struct "<t f>(7, 15)"
+  -- $ arp "down"
+  -- $ n "c'min'5d'2" # s "ewharp"
+  $ n (scale "ritusen" "2..6")
+  # s "ewharp"
+  # octave 6
+  # legato (slow 2  $ range 1.5 2 sine)
+  # dry 0.1 # room 0.9
+
+ d2 $ s "[sn:1*16 ~, bd bd]"
+  # dry 0.1 # room 0.3
+  # amp 0.05
+  # speed (slow 1.1 $ range 0.01 1.5 tri)
+  -- # legato 0.01
+
+d3 $ s "arpy*32" # cutoff (perlinWith (saw * 4) * 2000)
+ 

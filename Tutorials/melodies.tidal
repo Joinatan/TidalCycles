@@ -1,0 +1,19 @@
+d1
+  -- $ n (scale "mixolydian" "6..11")
+  $ jux rev
+  $ arp "diverge(5,8)"
+  $ n "g'9sus4"
+  -- # vowel "a"
+  # s "ewharp"
+  # dry 0.2 # room 0.8
+  # octave 5
+  # legato 2
+  -- # crush 8
+
+d2
+  -- $ jux rev
+  $ n (scale "majPent" "6..8")
+  # s "ewharp"
+  # dry 0.2 # room 0.8
+  # octave 6
+  # amp 0.2

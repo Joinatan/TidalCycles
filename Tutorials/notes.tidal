@@ -1,0 +1,18 @@
+
+d1
+  -- $ struct "t(3,8)"
+  $ n "<12 23>"
+  +| n (scale "ritusen" "1..7") 
+  # sound "rash"
+  # legato 1.2
+  # octave 4
+  -- # dry 0.3 # room 0.6 # size 0.3
+  # amp 0.05
+
+hush
+
+note (scale "ritusen" "1..7")
+
+import Sound.Tidal.Chords
+
+chordList
